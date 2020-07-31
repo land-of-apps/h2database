@@ -19,6 +19,7 @@ import org.h2.jdbc.JdbcConnection;
 import org.h2.schema.Sequence;
 import org.h2.test.TestBase;
 import org.h2.test.TestDb;
+import org.junit.jupiter.api.Test;
 
 /**
  * Test ALTER statements.
@@ -38,6 +39,7 @@ public class TestAlter extends TestDb {
     }
 
     @Override
+    @Test
     public void test() throws Exception {
         deleteDb(getTestName());
         conn = getConnection(getTestName());

@@ -10,6 +10,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import org.h2.test.TestBase;
 import org.h2.test.TestDb;
+import org.junit.jupiter.api.Test;
 
 public class TestAlterTableNotFound extends TestDb {
 
@@ -23,6 +24,7 @@ public class TestAlterTableNotFound extends TestDb {
     }
 
     @Override
+    @Test
     public void test() throws Exception {
         testWithoutAnyCandidate();
         testWithoutAnyCandidateWhenDatabaseToLower();

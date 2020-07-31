@@ -11,6 +11,7 @@ import java.sql.Statement;
 
 import org.h2.test.TestBase;
 import org.h2.test.TestDb;
+import org.junit.jupiter.api.Test;
 
 public class TestAnalyzeTableTx extends TestDb {
     private static final int C = 10_000;
@@ -30,6 +31,7 @@ public class TestAnalyzeTableTx extends TestDb {
     }
 
     @Override
+    @Test
     public void test() throws Exception {
         deleteDb(getTestName());
         Connection[] connections = new Connection[C];

@@ -13,6 +13,7 @@ import java.sql.Statement;
 import org.h2.api.ErrorCode;
 import org.h2.test.TestBase;
 import org.h2.test.TestDb;
+import org.junit.jupiter.api.Test;
 
 /**
  * Test ALTER SCHEMA RENAME statements.
@@ -32,6 +33,7 @@ public class TestAlterSchemaRename extends TestDb {
     }
 
     @Override
+    @Test
     public void test() throws Exception {
         deleteDb(getTestName());
         conn = getConnection(getTestName());
